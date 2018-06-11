@@ -1,0 +1,24 @@
+yasoobr labfinal grade: 19/20
+
+  ****************
+  # Code needed to be modified for grading        = 0/0
+
+  ***** Correctness 80% ===
+  Correctness is determined by running the provided test suite
+  sumByGroup                                      = 5/5
+  myScaleLinear                                   = 7/7
+  pieChart                                        = 3/4
+
+  TOTAL CORRECTNESS POINTS                       = 15 / 16
+
+  # ***** Style 20%
+  Style is determined by running eslint
+  lint passed                                     = 4/4
+
+  ****************************************************************
+
+  Numeric grade components are indicated as a fraction E/T, where E is what you
+  earned, and T is the points possible. The final sum at the top of the
+  file is another fraction; the denominator does not determine
+  the contribution of this assignment to the final grade.
+  

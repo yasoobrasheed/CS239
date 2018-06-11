@@ -1,0 +1,53 @@
+import {scaleLinear} from 'd3-scale';
+import {rgb} from 'd3-color';
+
+const numYears = 2016 - 1930 + 1;
+export const years = [...new Array(numYears)].map((d, i) => i + 1930);
+
+// feel free to add (and possibly export) other helper/utility functions
+
+// compute the per-year per-state rates of measles (the number of cases per
+// million people), using populationData to get a per-year per-state
+// population estimate.  The population should be linearly interpolated
+// (perhaps with a scaleLinear) between the years (e.g. 1930, 1940, 1950, etc)
+// where it is known; years after 2010 should use the 2010 population.  The
+// structure of the data returned should be identical to the measlesData
+// coming in: the only difference is that the numbers giving #cases in
+// measlesData should be 1,000,000 * #cases / population in the data returned.
+// Then given code returns the same measlesData given, which is incorrect.
+export function calculateRates(measlesData, populationData) {
+  // YOUR CODE HERE
+  return measlesData;
+}
+
+// compute the mean US measles rate as a weighted average of the states'
+// rates, weighted by the states' populations.  The return should be
+// like one element of the given measlesRates, but without the
+// StateName and StateAbbr keys. The given code returns the right
+// kind of object, but may or may not be a useful part of your code.
+export function calculateUSMeanRate(measlesRates, populationData) {
+  // YOUR CODE HERE
+  return Object.keys(measlesRates[0]).reduce((acc, key) => {
+    if (!isNaN(Number(key))) {
+      // key is a year, not 'StateAbbr' or 'StateName'
+      acc[key] = 0;
+    }
+    return acc;
+  }, {});
+}
+
+// Colormap to support ordinal comparisons of measles rates,
+// designed to be legible even for recent years
+export function buildColormapValue() {
+  // YOUR CODE HERE: how you set this up should involve specific numeric values
+  // for measles rates, which you can hard-code rather than re-learn from the data
+  return scaleLinear().domain([0, 666]).range([rgb(0, 0, 0), rgb(255, 255, 255)]);
+}
+
+// Colormap to support ordinal comparisons of per-state measles rates minus
+// the national average, designed to be legible even for recent years
+export function buildColormapValueMinusMean() {
+  // YOUR CODE HERE: how you set this up should involve specific numeric values
+  // for measles rates, which you can hard-code rather than re-learn from the data
+  return scaleLinear().domain([0, 666]).range([rgb(0, 0, 0), rgb(255, 255, 255)]);
+}

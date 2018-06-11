@@ -1,0 +1,31 @@
+/* NO NEED TO EDIT THIS FILE */
+
+
+.bar {
+  fill: steelblue;
+}
+
+.dot {
+  fill: cadetblue;
+}
+
+.vline {
+  stroke: lightskyblue;
+}
+
+.vellipse {
+  fill: lightsteelblue;
+}
+
+.rrect {
+  fill: deepskyblue;
+}
+
+.thicks {
+  fill: white;
+  stroke: gray;
+}
+
+.axis--x path {
+  display: none;
+}

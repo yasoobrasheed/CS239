@@ -1,0 +1,37 @@
+import {pie, arc} from 'd3-shape';
+import {COLORS} from './constants';
+
+/**
+ * Group input data and collect the sum of another key in the object
+ * @param {Array of Objects} data - the data to be grouped against
+ * @param {String} groupingKey - the key to group by
+ * @param {String} summingKey - the key to sum by
+ * @returns {Object} with keys consisting of groupingKey values
+ * and values consisting of the sum of summing key values for that group
+ */
+export function sumByGroup(data, groupingKey, summingKey) {
+  // YOUR CODE HERE
+  return {};
+}
+
+/**
+ * Builds rudimentary version of scaleLinear.
+ * @param {Array of two numbers} domain - the domain of the data to be scaled
+ * @param {Array of two numbers} range - the range of the data to be scaled
+ * @returns {Function} the scaling function
+ */
+export function myScaleLinear(domain, range) {
+  // YOUR CODE HERE
+  return () => {};
+}
+
+/**
+ * Build a donut chart
+ * @param {d3 selection object} svg - the svg node to insert your chart into
+ * @param {Array of Objects} data - the data to be grouped against
+ * @param {Object} layout - the parameters of the chart you are drawing
+ */
+export function yourChart(svg, data, layout) {
+  const {height, width, innerRadius, outerRadius} = layout;
+  // YOUR CODE HERE
+}

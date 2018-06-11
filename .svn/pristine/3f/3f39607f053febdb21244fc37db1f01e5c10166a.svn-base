@@ -1,0 +1,29 @@
+1)
+
+a. Interval value, can measure it but value of 0 does not mean no temperature.
+b. Ordinal value, order preserving but underlying values are not measured.
+c. Interval value, can measure it but value of 0 does not exist.
+d. Ratio value, can measure it and value of 0 means no students in the class.
+e. Ordinal value, order preserving but underlying values can be arbitrary.
+f. Interval value, can measure it but value of 0 does not mean no date.
+g. Ordinal value, can measure it but underlying values are more than rank-order.
+h. Nominal value, unique words, assignment.
+i. Nominal value or Interval value?
+j. Ratio value, can measure it and value of 0 means no price.
+
+2)
+
+a. (x1 * (p(x2) - p(x1))) / (p(x1) * (x2 - x1))
+
+b. http://www.wsj.com/graphics/amazon-the-making-of-a-giant/
+   Data Visualization: "Net Sales" (under "A Retail Colossus" section)
+
+   Will scrutinize the change in net sales from 2015 to 2017
+
+   2017: 115 billion - 112 px
+   2015: 75 billion - 64 px
+
+   p = (115 - 75) / 115 * 100 = 34.783
+   q = (112 - 64) / 64 * 100 = 75
+
+   Lie Factor = p / q = 2.156

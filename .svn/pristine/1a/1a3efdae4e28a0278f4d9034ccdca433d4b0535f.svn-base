@@ -1,0 +1,55 @@
+yasoobr datavis18 grade: 86.533
+Homeworks:
+        hw1    (6%):   11.4/12 == 95.000%
+        hw2    (6%):   103/135 == 76.296%
+        hw3    (6%):   110/148 == 74.324%
+        hw4    (6%):   118/142 == 83.098%
+        hw5    (6%):     15/15 == 100.00%
+        hw6    (6%):   100/108 == 92.592%
+                     -------------------
+     hw avg   (36%):           == 86.885%
+
+Projects:
+         p1   (20%):     49/60 == 81.666%
+                     -------------------
+   proj avg   (20%):           == 81.666%
+
+Exams:
+   labfinal   (10%):     19/20 == 95.000%
+                     -------------------
+   exam avg   (10%):           == 95.000%
+
+Current grade from 66% of all class work
+    overall   (66%):           == 86.533%
+
+            |<-- 0                                                                                      100 -->| median:
+        hw1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .------===<X>--- 95
+        hw2 . . . . . . . . . . . . . --------------------------------------------------X--------=======<m>==--- 93.3333
+        hw3 ---------------------------------------------------------------===========X======<m>======--------.  82.4324
+        hw4 ----------------------------------------------------------------------=============X=====<m>=====--- 90.8451
+        hw5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ------------<X 100
+        hw6 . . . . . . . . . . . . . . . . . .-----------------------------------------------=======<m>X===---- 90.7407
+      hwAvg . . . . . . . . . . . . . . . . . . . . . . . . . . . . . --------------------========X=<m>====-- .  89.8173
+         p1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . -------------X=====<m>===------- 88.3333
+      pjAvg . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . -------------X=====<m>===------- 88.3333
+   labfinal . . . . . . . . . . . . . . . . . . . . -----------------------------------====================X==<m 100
+    examAvg . . . . . . . . . . . . . . . . . . . . -----------------------------------====================X==<m 100
+    overall . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ---------=======Xm>======----  87.0704
+
+The plots above (best seen with a fixed-width font) depict the distribution of grades
+(in a [0,100] range) for the whole class, with one line per grade component.
+The "---" spans from the 5th to the 95th percentile, containing 90% of the class.
+The "===" spans from the 25th to the 75th percentile, containing 50% of the class.
+The "<m>" marks the median, the grade that splits the grade distribution in half.
+Your grade is indicated with a single "X" (which overwrites one character of the
+plot, including possibly the "<", "m", or ">" of the median indicator).
+
+The results above do NOT account for dropping the lowest 6% of your work.
+The mapping from numeric to letter grades is found only after everything is graded.
+
+These grades were gathered from your per-assignment grades and processed with scripts
+created by GLK. This file may not reflect recent corrections to per-assignment grades.
+If you believe there is an error in some individual assignment grade, double-
+check the per-assignment gradefile. If you think information above does not match
+what you think you got on an assignment, or if you believe there is an error in the
+arithmetic here, ask (privately) on Piazza.

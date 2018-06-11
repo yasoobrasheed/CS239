@@ -1,0 +1,97 @@
+body {
+  background-color: #ccc;
+}
+.title {
+  color: black;
+  font-family: Roboto-Black;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+.max-width-1000 {
+  max-width: 1000px;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: auto;
+}
+
+.flex {
+  display: flex;
+  width: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.state-hex {
+  cursor: pointer;
+  dominant-baseline: central;
+  text-anchor: middle;
+}
+
+.state-hex-label {
+  font-family: Roboto;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.checkbox input {
+  height: 22px;
+  width: 20px;
+}
+
+.checkbox span {
+  font-size: 18px
+}
+
+
+.not-enough-cols {
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  width: 445px;
+}
+
+.description {
+  max-width: 370px;
+  padding: 20px 0;
+}
+
+canvas {
+  position: absolute;
+}
+
+.pca-scatterplot {
+  z-index: 10;
+}
+
+.pca-scatterplot text {
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+circle {
+  cursor: pointer;
+}
+
+div.fix-width {
+  width: 900px;
+}
+
+.pca-container {
+  flex-direction: column;
+  width: 445px;
+}

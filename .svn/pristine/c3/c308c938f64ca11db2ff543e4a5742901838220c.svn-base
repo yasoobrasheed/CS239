@@ -1,0 +1,37 @@
+yasoobr hw6 grade: 100/108
+Graded revision 46
+
+**************** Questions #1,2,3 were stated on Piazza (no coding)
+
+#1.a = 3/3
+#1.b = 2.5/3
+identify and compare
+#1.c = 2.5/3
+missing "produce" verb
+#1.d = 3/3
+
+#2.a = 3/3
+#2.b = 3/3
+#2.c = 3/3
+#2.d = 0/3
+#2.e = 1/3
+actually no ambiguity; missing visual symmetry might be more about correspondence
+#2.f = 3/3
+
+#3.a = 3/3
+#3.b = 3/3
+#3.c = 1/3
+#3.d = 3/3
+
+**************** Coding portion of hw6
+
+# Style (just linting)                      = 10/10
+# Tests pass                                = 56/56
+
+Numeric grade components are indicated as a fraction E/T, where E is what you
+earned, and T is the points possible. The final sum (written and coding work)
+at the top of the file is another fraction; the denominator does not determine
+the contribution of this assignment to the final grade. Solutions were given
+out in class on May 24. Explanatory notes for deductions may be above.
+
+Graded by: GLK

@@ -1,0 +1,181 @@
+$black: #000;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  color: $black;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: $black;
+  font-size: 12px;
+  font-weight: semi-bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: auto;
+}
+
+.flex {
+  display: flex;
+  width: auto;
+}
+
+.flex-vert {
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-items: center;
+}
+
+.pill-box {
+  display: flex;
+
+  .color-mode-button  {
+    border-bottom: 5px solid #fff;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 10px;
+
+    &.selected {
+      border-bottom: 5px solid #000;
+    }
+  }
+}
+
+.image-container {
+  canvas {
+    position: absolute;
+  }
+
+  img {
+    opacity: 0;
+  }
+}
+
+.pad-only-sides {
+  padding: 0 20px;
+}
+
+.slider-container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+
+  .slider-label {
+    font-weight: bold;
+    height: 20px;
+    text-transform: uppercase;
+  }
+
+  .flex {
+    width: 100%;
+  }
+
+
+  .text-input-slider {
+    margin-left: 10px;
+    width: 30px;
+  }
+
+  // built on the super neat
+  // http://danielstern.ca/range.css/#/
+  .range-input-slider {
+    -webkit-appearance: none;
+    margin: 12.3px 0;
+    padding-right: 10px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: #000000;
+      border: 0.2px solid #010101;
+      border-radius: 1.3px;
+      cursor: pointer;
+      height: 8.4px;
+      width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 14px;
+      cursor: pointer;
+      height: 33px;
+      margin-top: -12.5px;
+      width: 42px;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+      background: #2e2e2e;
+    }
+
+    &::-moz-range-track {
+      background: #000000;
+      border: 0.2px solid #010101;
+      border-radius: 1.3px;
+      cursor: pointer;
+      height: 8.4px;
+      width: 100%;
+    }
+
+    &::-moz-range-thumb {
+      background: #ffffff;
+      border: 1px solid #000000;
+      border-radius: 14px;
+      cursor: pointer;
+      height: 33px;
+      width: 42px;
+    }
+  }
+
+}
+
+.controls-container {
+  min-width: 500px;
+}
+
+.arrow-container {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+
+  i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    pointer-events: none;
+  }
+
+  .right {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .left {
+      -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+.description {
+  max-width: 600px;
+}

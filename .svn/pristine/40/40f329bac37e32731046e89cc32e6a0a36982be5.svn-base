@@ -1,0 +1,25 @@
+{
+  "English": ["Antigua and Barbuda", "Bahamas", "Barbados", "Belize", "Botswana", "Burundi", "Cameroon", "Canada", "Cook Islands", "Dominica", "Federated States of Micronesia", "Fiji", "Gambia", "Ghana", "Grenada", "Guyana", "India", "Ireland", "Jamaica", "Kenya", "Kiribati", "Lesotho", "Liberia", "Malawi", "Malta", "Marshall Islands", "Mauritius", "Namibia", "Nauru", "Nigeria", "Niue", "Pakistan", "Palau", "Papua New Guinea", "Philippines", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "Seychelles", "Sierra Leone", "Singapore", "Solomon Islands", "South Africa", "South Sudan", "Sudan", "Swaziland", "Tanzania", "Tonga", "Trinidad and Tobago", "Tuvalu", "Uganda", "Vanuatu", "Zambia", "Zimbabwe", "Australia", "New Zealand", "United Kingdom", "United States", "Bahrain", "Bangladesh", "Brunei", "Cyprus", "Eritrea", "Ethiopia", "Israel", "Jordan", "Kuwait", "Malaysia", "Maldives", "Myanmar", "Qatar", "Sri Lanka", "United Arab Emirates"],
+  "French": ["Democratic Republic of the Congo", "France", "Canada", "Madagascar", "Cameroon", "Ivory Coast", "Niger", "Burkina Faso", "Mali", "Senegal", "Chad", "Guinea", "Rwanda", "Belgium", "Burundi", "Benin", "Haiti", "Switzerland", "Togo", "Central African Republic", "Republic of the Congo", "Gabon", "Djibouti", "Equatorial Guinea", "Comoros", "Luxembourg", "Vanuatu", "Seychelles", "Monaco"],
+  "Arabic": ["Algeria", "Bahrain", "Chad", "Comoros", "Djibouti", "Egypt", "Eritrea", "Iraq", "Israel", "Jordan", "Kuwait", "Lebanon", "Libya", "Mauritania", "Morocco", "Oman", "Palestine", "Qatar", "Saudi Arabia", "Somalia", "Sudan", "Syria", "Tanzania", "Tunisia", "United Arab Emirates", "Yemen", "Cyprus", "Iran", "Mali", "Niger", "Senegal", "Turkey"],
+  "Spanish": ["Mexico", "Colombia", "Spain", "Argentina", "Peru", "Venezuela", "Chile", "Ecuador", "Guatemala", "Cuba", "Bolivia", "Dominican Republic", "Honduras", "Paraguaye", "El Salvador", "Nicaragua", "Costa Rica", "Puerto Ricof", "Panama", "Uruguay", "Equatorial Guineag", "Andorra", "Belize", "Gibraltar", "United States"],
+  "Portuguese": ["Brazil", "Angola", "Mozambique", "Portugal", "Guinea-Bissau", "East Timor", "Equatorial Guinea", "Macau", "Cape Verde", "São Tomé and Príncipe"],
+  "German": ["Germany", "Austria", "Switzerland", "Belgium", "Luxembourg", "Liechtenstein"],
+  "Serbo-Croatian": ["Serbia", "Croatia", "Bosnia and Herzegovina", "Montenegro", "Kosovo"],
+  "Italian":	["Italy", "Switzerland", "San Marino", "Vatican City"],
+  "Malay": ["Indonesia", "Malaysia", "Singapore", "Brunei"],
+  "Russian": ["Russia", "Kazakhstan", "Belarus", "Kyrgyzstan"],
+  "Swahili": ["Tanzania", "Kenya", "Uganda", "Rwanda"],
+  "Chinese": ["China", "Singapore", "Taiwan"],
+  "Dutch": ["Netherlands", "Belgium", "Suriname"],
+  "Hindustani": ["Fiji", "India", "Pakistan"],
+  "Persian": ["Iran", "Afghanistan", "Tajikistan"],
+  "Tamil": ["Sri Lanka", "Singapore", "India"],
+  "Quechua": ["Peru", "Bolivia", "Ecuador"]
+}
+
+
+
+
+
+

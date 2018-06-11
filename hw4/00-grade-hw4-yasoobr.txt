@@ -1,0 +1,59 @@
+yasoobr hw4 grade: 118/142
+Graded revision 29
+
+**************** Questions #1 -- #4 were stated on Piazza (no coding)
+
+#1.a = 2/2
+#1.b = 2/2
+#1.c = 1/3  there were 3 sub-parts, as noted in question
+#1.d = 0/2  True
+#1.e = 2/2
+
+#2.a = 6/6
+#2.b = 5/5
+
+#3.a = 5/5 (reason 1)  It seems you only gave one reason; two were requested
+#3.b = 0/5 (reason 2)
+
+#4.a = 3/5  but genes don't have to be ordered
+#4.b = 5/5
+
+Questions #1--#4 graded by: Kindlmann
+
+**************** Design and Coding portion of hw4
+Deductions may be explained here or in *-graded.js:
+
+# Modified only appropriate files           = 10/10
+# Used only approved packages               = 5/5
+  c.f. https://piazza.com/class/jf9pbi0hf8i178?cid=232
+# No dynamic elements                       = 5/5
+# Visualized data w/out hardcoding          = 20/20
+
+"Good" vis and write-up:
+# says which task(s) the vis enables        = 3/5 you talk around but didn't ever specify which of the numbered tasks (besides #1) you're enabling
+# says which two principles the vis follows = 4/4 okay, but I'd say you're mainly using "position along a common axis" (Cleveland + McGill)
+# vis works well and writeup says how        = 13/16
+position along a common axis is what makes these legible, not "proximity and similarity" (which aren't about quantitative comparisons)
+nice job using overlap to thwart the geometric separation of the bars, but it does
+interfere somewhat with reading off the recovery times.
+
+"Bad" vis and write-up:
+# says which task(s) the vis hampers        = 3/5 same problem as above
+# says which two principles the vis breaks  = 4/4
+# vis doesn't work and writeup says how     = 10/16
+Having to guess the mark corresponding to the body part can make it impossible
+to do the tasks, not just annoying; what if two parts share the same recovery time?
+The pie chart is a completely straight-forward way to show fraction (not annoying)
+
+# Style (including linting)                 = 10/10
+# Other correctness                         = 0/0
+
+Write-up and code graded by: Kindlmann
+
+Numeric grade components are indicated as a fraction E/T, where E is what you
+earned, and T is the points possible. The final sum (written and coding work)
+at the top of the file is another fraction; the denominator does not determine
+the contribution of this assignment to the final grade.  Reading question
+answers were given out in class on May 1, and code examples where shared April
+28 at https://piazza.com/class/jf9pbi0hf8i178?cid=264 . Explanatory notes for
+deductions may be above.

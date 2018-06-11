@@ -1,0 +1,89 @@
+grp-1705 p1 grade: 49/60
+(got 8 post-it votes from class, but did not affect grading)
+5-star Amazon ratings --> ELI renters & SNAP
+https://piazza.com/class/jf9pbi0hf8i178?cid=190
+avallaster Andrew Vallaster
+salemohamedo Omar Salemohamed
+yasoobr Yasoob Rasheed
+
+This grading scheme is based on what was given in the
+Project 1 definition: https://piazza.com/class/jf9pbi0hf8i178?cid=85
+
+****** The Proposal:
+# was on-time = 2/2
+
+# described purpose, data source, pre-processing, vis methods = 2/2
+
+# was refined as needed based on feedback = 2/2
+didn't have a clear plan at first, but changed direction
+
+
+****** The Write-up:
+# Answers basic questions about context and purpose = 3/5
+You discuss two different measures of poverty, but you don't explain how combining
+these two particular measures tells us something new.  The questions you state ("in
+which regions of the U.S. do people have access to affordable housing with little need of
+nutrition assistance?") are essentially restatements of "where does the data take on
+certain values".  That's not a real question, in the way we've been talking about
+"What's the question?" in this class.  We make visualizations to learn something about
+the phenomenon in the real world that generate data or can be measured with data,
+not just to looking at the numbers themselves. What would it like to live, for example,
+in a place with high ELI housing availability, but low SNAP participation, and how does
+that map to a US viewer's sense of geography?
+
+# Documents pre-processing = 3/3
+
+# Documents and defends layout and encoding design decisions = 3/4
+You made a bivariate map in LAB space, by putting a parallelepiped along the L and B
+axes, but you could have explained more exactly how: what were the two basis vectors in
+LAB space that were scaled by each variable?  And how did you choose that? It looks
+like you set it up so that varying each variable in isolation would change both
+L and B, but could you could oriented it so that one variable was aligned with L
+and one with B.
+
+# Describes different vis that could have been made from same data = 3/4
+A scatterplot embedded within the colormap legend would actually have been a useful
+complement to the poster.  You also could have had smaller inset maps that showed
+the individual variation of the two variables in isolation, to help understand the
+colormap showing their combined variation.
+
+# Documents division of labor = 2/2
+
+
+****** The Code:
+# had good Javascript style (lint + eyeball), and effective d3 usage = 9/9
+
+# produces result algorithmically (rather than lots of hard-coding) = 3/3
+
+
+****** The finished poster:
+# was able to be printed (e.g. nothing dynamic) = 2/2
+
+# (with write-up) demonstrates understanding and use of class content to date = 3/3
+Creating your own bivariate map was ambitious.
+
+# is a self-contained document with title, authors, and explanation = 1/3
+The authors are missing from the poster!
+The single sentence under the title does not do enough to explain what we might learn from this.
+The ELI variable in particular merits more explanation- is it a measure of poverty,
+or a mismatch between poverty and housing availability? Besides restating something
+about the data, what is the common political or cultural context for all the regions
+that are blue, or yellow? 
+
+# shows evidence of thought, care, and intent (rather than defaults) = 3/3
+
+# has salient visible structure, with further details available w/ closer scrutiny = 1/3
+It would have helped a lot to have annotations so the viewer has an opportunity to connect what
+they might know about geography and poverty (where is Detroit?  Where is the "deep south"?)  You
+mentioned omitting the state boundaries, but given how much the data varies over space, it
+would have helped to see the states to provide that geographic context.
+
+# is, over-all, an effective visualization = 7/10
+One way to understand the notion of Correspondence that Algebraic Vis tries to give mathematical
+meaning to, but which came up before when talking about "Effective" visualizations is to ask:
+Do the structures that clearly stand out in visualization correspond to important things about
+the world, as measured by the data?  What stands out in this map is the blues, and the dense
+alternation of blue and dark gray in the south east?  Do you mean Blue to be so prominent?
+What explains the sometimes very spatially incoherent variation of SNAP? Because of this
+and the issues above, it is hard to leave the poster feeling that one has learned
+something new.

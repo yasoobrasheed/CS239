@@ -1,0 +1,46 @@
+1) Concerning [Stevens-Scales-1946]: State how Stevens would identify the scale
+(nominal aka categorical, ordinal, interval, and ratio) for each of the
+following variables.  Some may have more than one correct answer.  A terse
+justification (20 words or less) is allowed, but not needed.
+
+a) degrees Celsius
+b) Mohs scale of mineral hardness
+c) a quantity X for which log(X) is well-defined
+d) the number of students in datavis18
+e) rankings of CS departments in different colleges
+f) Gregorian calendar dates
+g) intelligence
+h) baby names
+i) a variable V for which using V2 instead of V makes no practical difference
+j) the price of Facebook's (FB) stock on the NASDAQ exchange
+
+What is i? Should we put the correct answer?
+a. Interval value, can measure it but value of 0 does not mean no temperature.
+b. Ordinal value, order preserving but underlying values are not measured.
+c. Interval value, can measure it but value of 0 does not exist.
+d. Ratio value, can measure it and value of 0 means no students in the class.
+e. Ordinal value, order preserving but underlying values can be arbitrary.
+f. Interval value, can measure it but value of 0 does not mean no date.
+g. Ordinal value, can measure it but underlying values are more than rank-order.
+h. Nominal value, unique words, assignment.
+i.
+j. Ratio value, can measure it and value of 0 means no price.
+
+2) Concerning the Lie Factor in [Tufte-GraphicalIntegrity-2001]:
+a) Suppose x1 and x2 are two values of some (ratio) variable V to be visualized,
+and that p(x1) and p(x2) are either the magnitudes of the physical encoding of
+variable V or the magnitudes of the perception of the encoding (Tufte seems to
+conflate these when it comes to Lie Factor). Suppose also that x1 is not zero,
+and nor is p(x1).  Give the complete formula for the Lie Factor of the encoding
+in question, in terms of x1, x2, p(x1), and p(x2).  No prose explanation needed.
+b) Find and identify a visualization online with a significant Lie Factor (less
+than 0.9 or more than 1.1), and compute the Lie Factor, using approximate screen
+area in pixels as the physical measure of the magnitude of the visual encoding.
+Remember the possible sources of visualizations from hw1. It is okay for 
+multiple people to end up submitting the same visualization. Show your work.
+You can simplify your task by identifying just two elements in the
+visualization, and the change between them, as the thing for which you compute a
+Lie Factor (one visualization could have more than one Lie Factor depending on
+two data elements are scrutinized).
+
+a.

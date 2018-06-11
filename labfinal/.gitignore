@@ -1,0 +1,7 @@
+node_modules/
+*.aux
+*.log
+*.synctex.gz
+bundle.js
+bundle.js.map
+graded-work.md

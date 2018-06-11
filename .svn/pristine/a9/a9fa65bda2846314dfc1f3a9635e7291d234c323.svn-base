@@ -1,0 +1,39 @@
+/* global d3 */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Boundaries of our diagram
+  const height = 600;
+  const width = 600;
+  const margin = {top: 75, left: 75, right: 75, bottom: 75};
+
+  // First create a pair of scales, call them x and y
+
+  // Create the ticks
+
+  // Create the labels
+
+  // UNCOMMENT THE LINES BELOW WHEN YOU ARE READY
+  // let angle = 0;
+  // const hand = SVG_SELECTION.append('line')
+  //   // once you've built scales as appropriate, use them to fill
+  //   // in these values
+  //   .attr('x1', CLOCK_ORIGIN_X)
+  //   .attr('y1', CLOCK_ORIGIN_Y)
+  //   .attr('class', 'hand')
+  //   .attr('stroke', '#f00')
+  //   .attr('stroke-width', 10)
+  //   .attr('stroke-linecap', 'round');
+  // movehand();
+  // function movehand() {
+  //   angle += 0.1;
+  //   angle = angle > Math.PI * 2 ? 0 : angle;
+  //   hand
+  //     .attr('class', 'hand')
+  //     .transition()
+  //     .duration(100)
+  //     .attr('x2', X_SCALE(0.4 * Math.cos(angle)))
+  //     .attr('y2', Y_SCALE(0.4 * Math.sin(angle)))
+  //     .on('end', movehand);
+  // }
+
+});

@@ -1,0 +1,56 @@
+yasoobr hw2 grade: 103/135
+Graded revision 10
+
+======== Questions #1 and #2 were stated on Piazza (no coding)
+
+#oops = -1/0
+You submitted a file called "hw2.pdf", but it is not a PDF file;
+it is just an ASCII text file. In the future, convert this to a real
+PDF file, to better respect the grading workflow.
+
+#1.a = 2/2
+#1.b = 2/2
+#1.c = 2/2
+#1.d = 2/2
+#1.e = 2/2
+#1.f = 2/2
+#1.g = 2/2
+#1.h = 2/2
+#1.i = 2/2
+#1.j = 2/2
+
+#2.a = 5/5
+#2.b = 10/10
+
+Questions #1 and #2 graded by: Amy Zeng
+
+======== Coding portion of hw2
+Additional comments are in index-graded.js
+
+80 points for correctness (10 points per vis (with one exception))
+
+#Scatterplot                                 = 4/10
+#Bar chart like lines                        = 5/5
+#Ellipses                                    = 10/10
+#Rounded rects                               = 10/10
+#Stroke varying circles                      = 10/10
+#Hue varying circles                         = 10/10
+#Saturation varying circles                  = 10/10
+#Luminance varying circles                   = 5/10
+
+20 points for style
+
+#Style                                       = 0/20
+#Modified only index.js                      = 5/5
+
+Code graded by: Kai Li
+
+Numeric grade components are indicated as a fraction E/T, where E is what you
+earned, and T is the points possible. The final sum (written and coding work)
+at the top of the file is another fraction; the denominator does not determine
+the contribution of this assignment to the final grade.  Correct answers were
+given out in class on April 12. Explanatory notes for deductions may be above.
+
+Requests for reconsideration of a grade should be made within a week by
+posting a private note in the hw2 Piazza folder.  **STATE** **YOUR**
+**CNETID**, the question you think was mis-graded, and your explanation.

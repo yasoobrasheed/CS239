@@ -1,0 +1,204 @@
+/* global d3 */
+
+document.addEventListener('DOMContentLoaded', () => {
+  buildThreeHandClock();
+  buildChromachron();
+});
+
+function makeLabel(scaleFactor) {
+  if (scaleFactor % 4 !== 0) {
+    return null;
+  }
+  return 1 + (scaleFactor / 4);
+}
+
+function boldTicks(scaleFactor) {
+  if (scaleFactor % 4 !== 0) {
+    return null;
+  }
+  return 3;
+}
+
+// put your code for the three handed clock in here
+function buildThreeHandClock() {
+  const width = 300;
+  const height = 300;
+  //  const margin = {left: 10, right: 10, top: 10, bottom: 10};
+
+  const X_SCALE = d3.scaleLinear().domain([-1, 1]).range([0, width]);
+  const Y_SCALE = d3.scaleLinear().domain([-1, 1]).range([0, height]);
+
+  const thcContainer = d3.select('.clock-container').append('svg')
+    .attr('width', 300)
+    .attr('height', 300);
+  const tickData = [...new Array(48)].map((d, i) => i);
+  thcContainer.selectAll('line')
+    .data(tickData)
+    .enter().append('line')
+    .attr('x1', d => X_SCALE(0.7 * Math.cos(d / 48 * (2 * Math.PI))))
+    .attr('x2', d => X_SCALE(0.6 * Math.cos(d / 48 * (2 * Math.PI))))
+    .attr('y1', d => Y_SCALE(0.7 * Math.sin(d / 48 * (2 * Math.PI))))
+    .attr('y2', d => Y_SCALE(0.6 * Math.sin(d / 48 * (2 * Math.PI))))
+    .attr('stroke', 'black')
+    .attr('stroke-width', d => boldTicks(d));
+
+  thcContainer.selectAll('label')
+    .data(tickData)
+    .enter().append('text')
+    .attr('x', d => X_SCALE(0.8 * Math.cos(3 * Math.PI / 2 + (Math.PI * 2 * d / 48))))
+    .attr('y', d => Y_SCALE(0.8 * Math.sin(3 * Math.PI / 2 + (Math.PI * 2 * d / 48))))
+    .text(d => makeLabel(d))
+    .style('fill', 'black');
+
+  let sAngle = 3 * Math.PI / 2;
+  let mAngle = 3 * Math.PI / 2;
+  let hAngle = 3 * Math.PI / 2;
+  const hand = thcContainer.append('line')
+    .attr('x1', X_SCALE(0))
+    .attr('y1', Y_SCALE(0))
+    .attr('class', 'hand')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 2)
+    .attr('stroke-linecap', 'round');
+  const mHand = thcContainer.append('line')
+    .attr('x1', X_SCALE(0))
+    .attr('y1', Y_SCALE(0))
+    .attr('class', 'mHand')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 5)
+    .attr('stroke-linecap', 'round');
+  const hHand = thcContainer.append('line')
+    .attr('x1', X_SCALE(0))
+    .attr('y1', Y_SCALE(0))
+    .attr('class', 'hHand')
+    .attr('stroke', 'black')
+    .attr('stroke-width', 10)
+    .attr('stroke-linecap', 'round');
+  hands();
+
+  function hands() {
+    sAngle += Math.PI / 24;
+    sAngle = sAngle > Math.PI * 2 ? 0 : sAngle;
+    mAngle += Math.PI / 24 / 60;
+    mAngle = mAngle > Math.PI * 2 ? 0 : mAngle;
+    hAngle += Math.PI / 24 / 360;
+    hAngle = hAngle > Math.PI * 2 ? 0 : hAngle;
+
+    hand
+      .attr('class', 'hand')
+      .transition()
+      .duration(100)
+      .attr('x2', X_SCALE(0.5 * Math.cos(sAngle)))
+      .attr('y2', Y_SCALE(0.5 * Math.sin(sAngle)))
+      .on('end', hands);
+    mHand
+      .attr('class', 'mHand')
+      .transition()
+      .duration(100)
+      .attr('x2', X_SCALE(0.5 * Math.cos(mAngle)))
+      .attr('y2', Y_SCALE(0.5 * Math.sin(mAngle)))
+      .on('end', hands);
+    hHand
+      .attr('class', 'hHand')
+      .transition()
+      .duration(100)
+      .attr('x2', X_SCALE(0.3 * Math.cos(hAngle)))
+      .attr('y2', Y_SCALE(0.3 * Math.sin(hAngle)))
+      .on('end', hands);
+  }
+}
+
+// We've provided the correct colors for you
+// they are order such that the 12oclock wedge is first, the 1olock wedge is second
+const CHROMA_COLORS = [
+  '#FCE920',
+  '#F87C1D',
+  '#FDC0C0',
+  '#D7212C',
+  '#FC66D1',
+  '#B718A9',
+  '#403FB8',
+  '#317334',
+  '#04C6CB',
+  '#954834',
+  '#E0D6BB',
+  '#CD9B64'
+];
+
+// put your code for the chromachron in here
+function buildChromachron() {
+  const width = 300;
+  const height = 300;
+  const radius = 100;
+
+  const chrContainer = d3.select('.second-clock-container')
+    .append('svg')
+    .attr('width', 300)
+    .attr('height', 300)
+    .append('g')
+    .attr('transform', 'translate(150, 150)');
+
+  chrContainer.selectAll('rect')
+    .data([0]).enter()
+    .append('rect')
+      .attr('x', -150)
+      .attr('y', -150)
+      .attr('width', width)
+      .attr('height', height)
+      .attr('fill', 'black');
+
+  const dataset = [
+    {label: 'a', count: 100 / 12},
+    {label: 'b', count: 100 / 12},
+    {label: 'c', count: 100 / 12},
+    {label: 'd', count: 100 / 12},
+    {label: 'e', count: 100 / 12},
+    {label: 'f', count: 100 / 12},
+    {label: 'g', count: 100 / 12},
+    {label: 'h', count: 100 / 12},
+    {label: 'i', count: 100 / 12},
+    {label: 'j', count: 100 / 12},
+    {label: 'k', count: 100 / 12},
+    {label: 'l', count: 100 / 12}
+  ];
+
+  const colors = d3.scaleOrdinal().range(CHROMA_COLORS);
+  const arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(radius);
+  const pie = d3.pie()
+    .value(d => d.count)
+    .sort(null);
+
+  chrContainer.selectAll('path')
+    .data(pie(dataset))
+    .enter()
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', (d, i) => colors(d.data.label));
+
+  const hArc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(radius - (radius / 5))
+    .startAngle(0)
+    .endAngle(Math.PI / 6);
+
+  let handAngle = 0;
+  const chrHand = chrContainer.append('path')
+    .attr('d', hArc)
+    .style('fill', 'black');
+  moveHand();
+
+  function moveHand() {
+    handAngle += Math.PI / 24;
+    handAngle = handAngle > Math.PI * 2 ? 0 : handAngle;
+
+    chrHand
+      .attr('class', 'chrHand')
+      .transition()
+      .duration(100)
+      .attr('d', hArc.startAngle(handAngle))
+      .attr('d', hArc.endAngle(handAngle + 2 * Math.PI - Math.PI / 6))
+      .on('end', moveHand);
+  }
+}

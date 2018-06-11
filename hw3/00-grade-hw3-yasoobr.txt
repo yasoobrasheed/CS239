@@ -1,0 +1,76 @@
+yasoobr hw3 grade: 110/148
+Graded revision 16
+
+**************** Questions #1 and #2 were stated on Piazza (no coding)
+
+You handed in a file called "hw3.pdf" but it was actually just a plain
+text file, not a PDF file.  We asked that you submit a PDF file.  We
+use PDF because it can represent the formatting that many people chose
+to use, and it is easy to convert/print anything to PDF.  Not using
+PDF slows down grading.  Please submit PDF files.
+
+#1.a = 0/3  spatial substrate
+#1.b = 3/3
+#1.c = 0/3  expressive
+#1.d = 0/3  effective
+#1.e = 3/3
+#1.f = 3/3
+#1.g = 3/3
+#1.h = 3/3
+
+#2.a = 3/3
+#2.b = 3/3
+#2.c = 0/3  actually zero people; not studied experimentally
+#2.d = 0/3  what percent an indicated bar or segment is of the largest
+#2.e = 0/3  ~55%
+#2.f = 0/3  "TYPE 3" part of Figure 13
+#2.g = 3/3
+#2.h = 1/3  but didn't answer second part (no, author's experimental results don't bear on how to visualize categorical variables)
+
+Questions #1 and #2 graded by: Kindlmann
+
+**************** Coding portion of hw3
+
+Deduction explanations are in index-graded.js, utils-graded.js
+
+# Modified only appropriate files               = 0/0
+
+***** index.js correctness (67 pts) ===
+
+3 Handed Clock (37 pts)
+# Has 3 hands (second/minute/hour)              = 10/10
+# Has 12 numerical markings indicating hour     = 5/5
+# Hands move                                    = 2/2
+# Hands move in a clock like ratio              = 0/15
+  (second hand moves 60x the minute, which moves 12x the hour)
+# Second hand visits 60 places around the wheel = 5/5
+
+Chromachron (30 pts)
+# 12 sections are visually correct              = 15/15
+# Wedge dial is visually correct                = 10/10
+# Wedge dial moves                              = 5/5
+
+***** utils.js correctness (13 pts) ===
+
+# Tests pass                                    = 13/13
+
+# ***** Style (any file)                        = 20/20
+
+Code graded by: Shangxi Zhang
+
+****************************************************************
+
+Numeric grade components are indicated as a fraction E/T, where E is what you
+earned, and T is the points possible. The final sum (written and coding work)
+at the top of the file is another fraction; the denominator does not determine
+the contribution of this assignment to the final grade.  Reference solutions
+were given out in class on April 19. Explanatory notes for deductions may be
+above.
+
+Requests for reconsideration of a grade should be made within a week by
+posting a private note in the hw3 Piazza folder.  Structure your note as:
+- Your CNetID
+- The question or point you think was mis-graded
+- The grader associated with that point
+- Your explanation.
+Not conforming to this structure will slow down regrading.

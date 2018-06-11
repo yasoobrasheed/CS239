@@ -1,0 +1,10 @@
+import {myExampleUtil} from './utils';
+// In this file, starting from this function you will produce your "good" visualization
+// code should be encapsulated within functions
+// you are encouraged to write utility methods and import them, as indicated above
+// we have placed an SVG in the dom (accessible via the selector #thevis)
+// where you should place your work
+export function goodVis(data) {
+  console.log('Hello Good: ' + myExampleUtil(data.length)); // Feel free to remove
+}
+

@@ -1,0 +1,100 @@
+import {maxY} from './utils';
+import {select} from 'd3-selection';
+import {scaleBand} from 'd3-scale';
+import {scaleLinear} from 'd3-scale';
+import {axisBottom} from 'd3-axis';
+import {axisLeft} from 'd3-axis';
+import {axisRight} from 'd3-axis';
+
+export function goodVis(data) {
+  // SET UP CONTAINER
+  const margin = {top: 50, bottom: 50, left: 50, right: 50};
+  const width = 800;
+  const height = 500;
+
+  const container = select('#thevis')
+    .attr('width', width)
+    .attr('height', height);
+
+  // MAKE SCALES
+  const x = scaleBand()
+    .domain(data.map(d => d.part))
+    .range([margin.left, width - margin.right])
+    .padding(0.25);
+
+  const y = scaleLinear()
+    .domain([0, maxY(data.map(d => d.percentage))])
+    .range([height - margin.bottom, margin.top]);
+
+  const y2 = scaleLinear()
+    .domain([0, maxY(data.map(d => d.recovery))])
+    .range([height - margin.bottom, margin.top]);
+
+  // ADD AXES
+  const g = container.append('g');
+
+  g.append('g')
+    .attr('transform', `translate(0, ${height - margin.bottom})`)
+    .call(axisBottom(x))
+    .append('text')
+    .attr('x', width / 2)
+    .attr('y', margin.bottom / 1.5)
+    .attr('text-anchor', 'start')
+    .attr('fill', 'black')
+    .attr('font-size', '12px')
+    .text('Body Parts');
+
+  g.append('g')
+    .attr('transform', `translate(${margin.left}, 0)`)
+    .call(axisLeft(y))
+    .append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('x', -(width / 3))
+    .attr('y', -(margin.bottom / 1.5))
+    .attr('text-anchor', 'start')
+    .attr('fill', '#99C24D')
+    .attr('font-size', '12px')
+    .text('Percentage (%)');
+
+  g.append('g')
+    .attr('transform', `translate(${width - margin.right}, 0)`)
+    .call(axisRight(y2))
+    .append('text')
+    .attr('transform', 'rotate(90)')
+    .attr('x', (width / 3))
+    .attr('y', -(margin.bottom / 1.5))
+    .attr('text-anchor', 'end')
+    .attr('fill', '#038AA7')
+    .attr('font-size', '12px')
+    .text('Recovery Time (in days)');
+
+  // ADD BARS
+  g.selectAll('bar')
+    .data(data)
+    .enter().append('rect')
+    .attr('class', 'bar')
+    .attr('x', d => x(d.part))
+    .attr('y', d => y(d.percentage))
+    .attr('width', x.bandwidth())
+    .attr('height', d => height - y(d.percentage) - margin.bottom)
+    .attr('fill', '#99C24D');
+
+  g.selectAll('bar')
+    .data(data)
+    .enter().append('rect')
+    .attr('class', 'bar')
+    .attr('x', d => x(d.part))
+    .attr('y', d => y2(d.recovery))
+    .attr('width', x.bandwidth() / 2)
+    .attr('height', d => height - y2(d.recovery) - margin.bottom)
+    .attr('fill', '#038AA7')
+    .style('opacity', 0.5);
+
+  // ADD TITLE
+  container.append('text')
+    .attr('transform', 'translate(0, 0)')
+    .attr('x', margin.left * 4)
+    .attr('y', margin.top / 2)
+    .attr('font-size', '20px')
+    .text('Injury Rates vs. Injury Recovery of Various Body Parts');
+}

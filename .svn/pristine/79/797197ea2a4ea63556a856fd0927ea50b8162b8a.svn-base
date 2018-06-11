@@ -1,0 +1,116 @@
+import React from 'react';
+import {csv} from 'd3-fetch';
+
+import Checkbox from './checkbox';
+import HexMap from './hex-map';
+import PcaScatterplot from './pca-scatterplot';
+import {doPCA, normalizeData} from '../pca';
+import {
+  buildColormap1D,
+  buildColormap2D,
+  build1dStateColors,
+  build2dStateColors,
+  convertArrayToMap,
+  computeSingleColumnDomain,
+  transposeObjectOfArrays
+} from '../utils';
+import {
+  APP_DESCRIPTION,
+  PCA_COLUMNS_COLORS,
+  STATE_ABBREVIATIONS
+} from '../constants';
+
+class RootComponent extends React.Component {
+  state = {
+    // initialize all states as being initally unselected
+    selectedStates: convertArrayToMap(STATE_ABBREVIATIONS, false),
+    loading: true,
+    originalData: null,
+    normedData: null,
+    selectedPcaColumns: convertArrayToMap(Object.keys(PCA_COLUMNS_COLORS), false)
+  }
+  componentWillMount() {
+    csv('data/data.csv')
+      .then(data => this.setState({
+        originalData: data,
+        normedData: normalizeData(transposeObjectOfArrays(data), ['StateCode']),
+        loading: false
+      }));
+  }
+
+  render() {
+    const {selectedStates, normedData, selectedPcaColumns, loading, originalData} = this.state;
+    if (loading) {
+      return (<div><h1>LOADING</h1></div>);
+    }
+    const numSelectedColumns = Object.keys(selectedPcaColumns)
+      .reduce((acc, key) => acc + (selectedPcaColumns[key] ? 1 : 0), 0);
+    const doingPCA = numSelectedColumns >= 2;
+    const pcaData = doingPCA ? doPCA(normedData, selectedPcaColumns) : {};
+    // console.log('render: pcaData =', pcaData);
+    const domains = doingPCA ?
+      {xMin: -1, xMax: 1, yMin: -1, yMax: 1} :
+      (numSelectedColumns ? computeSingleColumnDomain(normedData, selectedPcaColumns) : {});
+    const colorMap = doingPCA ?
+        buildColormap2D(pcaData.variance1 / pcaData.variance0) :
+      (numSelectedColumns ? buildColormap1D([domains.min, domains.max]) : {});
+    const stateColors = doingPCA ? build2dStateColors(normedData, pcaData, colorMap) :
+      (numSelectedColumns ? build1dStateColors(normedData, colorMap, selectedPcaColumns) : {});
+
+    return (
+      <div className="flex container max-width-1000 center">
+        <div className="title">hw6 - PCA</div>
+        <div className="flex  fix-width">
+          <div>
+            <HexMap
+              selectedStates={selectedStates}
+              onClick={stateName => {
+                selectedStates[stateName] = !selectedStates[stateName];
+                this.setState({selectedStates});
+              }}
+              stateColors={stateColors}
+              width={500}/>
+          </div>
+          <div className="description">{APP_DESCRIPTION}</div>
+        </div>
+        <div className="flex fix-width">
+          {doingPCA && <div className="pca-container flex center "><PcaScatterplot
+            colorMap={colorMap}
+            pcaData={pcaData}
+            onClick={stateName => {
+              selectedStates[stateName] = !selectedStates[stateName];
+              this.setState({selectedStates});
+            }}
+            selectedStates={selectedStates}
+            domains={domains}
+            originalData={originalData}
+            selectedPcaColumns={selectedPcaColumns}/>
+            <div>{`λ₀/λ₁=${`${pcaData.variance0 / pcaData.variance1}`.slice(0, 5)};
+                Variance shown: ${`${100 * (pcaData.variance0 +
+                pcaData.variance1) / pcaData.varianceSum}`.slice(0, 5)}%`}</div>
+          </div>}
+
+          {!doingPCA &&
+            <div className="not-enough-cols"> Select 2 or more variables for PCA </div>
+          }
+          <div className="container">
+            {Object.keys(PCA_COLUMNS_COLORS).map((col, idx) => {
+              return (<Checkbox
+                key={idx}
+                onClick={() => {
+                  selectedPcaColumns[col] = !selectedPcaColumns[col];
+                  this.setState({selectedPcaColumns});
+                }}
+                label={col}
+                color={PCA_COLUMNS_COLORS[col]}
+                value={selectedPcaColumns[col]}
+                />);
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+RootComponent.displayName = 'RootComponent';
+export default RootComponent;

@@ -1,0 +1,39 @@
+/* global d3 */
+
+document.addEventListener('DOMContentLoaded', () => {
+  buildThreeHandClock();
+  buildChromachron();
+});
+
+// put your code for the three handed clock in here
+function buildThreeHandClock() {
+  const width = 300;
+  const height = 300;
+  const margin = {left: 10, right: 10, top: 10, bottom: 10};
+  // YOUR CODE HERE!!
+}
+
+// We've provided the correct colors for you
+// they are order such that the 12oclock wedge is first, the 1olock wedge is second
+const CHROMA_COLORS = [
+  '#FCE920',
+  '#F87C1D',
+  '#FDC0C0',
+  '#D7212C',
+  '#FC66D1',
+  '#B718A9',
+  '#403FB8',
+  '#317334',
+  '#04C6CB',
+  '#954834',
+  '#E0D6BB',
+  '#CD9B64'
+];
+// put your code for the chromachron in here
+function buildChromachron() {
+  const width = 300;
+  const height = 300;
+  const radius = 100;
+
+  // YOUR CODE HERE!!
+}
